@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tindog | Find Your Pawfect Match</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🐾 Tindog</h1>
+    <p>Love is just one sniff away!</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <h2>Is Your Dog Still Single?</h2>
+        <p>Stop letting your dog third-wheel your love life!</p>
+        <p>Find your furry friend's soulmate today.</p>
+        <a href="#profiles" class="btn">Find a Match</a>
+    </section>
+
+    <section id="profiles" class="content">
+        <h2>Meet Today's Eligible Pups</h2>
+
+        <div class="profiles">
+
+            <div class="card">
+                <img
+                    src="https://i.pinimg.com/736x/54/71/1b/54711b994677a8355d5631012d146937.jpg"
+                    alt="Golden retriever named Bruno">
+                <h3>Bruno, 3</h3>
+                <p class="bio">Professional napper. Part-time heartbreaker.</p>
+                <p><strong>Compatibility: 98%</strong></p>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://i.pinimg.com/736x/3e/1d/9f/3e1d9f10f075a9d493a5446b7367aba1.jpg"
+                    alt="Cute dog named Bella">
+                <h3>Bella, 2</h3>
+                <p class="bio">Loves long walks and stealing your bed.</p>
+                <p><strong>Compatibility: 95%</strong></p>
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://i.pinimg.com/1200x/ac/e9/47/ace947833f7bd47b9d8eb5e23ee8cf1c.jpg"
+                    alt="Happy dog named Max">
+                <h3>Max, 4</h3>
+                <p class="bio">Looking for love. Will accept snacks too.</p>
+                <p><strong>Compatibility: 91%</strong></p>
+            </div>
+
+        </div>
+        <p id="message"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Tindog. Made with love and treats.</p>
+    <p>No humans allowed to choose without their dogs' approval!</p>
+</footer>
+
+<script>
+    function barkYes(name) {
+        document.getElementById("message").textContent =
+            "Woof! You liked " + name +
+            "! Your human has been notified. 🐾";
+    }
+
+    function nextPup() {
+        document.getElementById("message").textContent =
+            "Fetching the next eligible pup... More treats, please! 🦴";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Tindog</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🐾 Tindog</h1>
+      <p>Love is just one sniff away!</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="content">
+      <h2>Contact Our Pack</h2>
+      <p>Having a ruff day? We're all ears. Well, most of us.</p>
+      <p>Fill in the form below and our team will get back to your human.</p>
+
+      <form id="contactForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="dogname">Your Dog's Name:</label>
+        <input
+          type="text"
+          id="dogname"
+          placeholder="Who's looking for love?"
+          required
+        />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" required>
+          <option value="">Choose an option</option>
+          <option>My dog needs a date</option>
+          <option>My dog got rejected</option>
+          <option>My dog is too popular</option>
+          <option>Complaint about treats</option>
+          <option>Other dog-related drama</option>
+        </select>
+
+        <label for="message">Your Message:</label>
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Tell us the tea... or the kibble."
+          required
+        ></textarea>
+
+        <button type="submit">Send Message 🐾</button>
+      </form>
+
+      <p id="response"></p>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Tindog. Made with love and treats.</p>
+    </footer>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          document.getElementById("response").textContent =
+            "Thanks for reaching out! We'll get back to you and your pup soon. 🐶";
+          this.reset();
+        });
+    </script>
+  </body>
+</html>

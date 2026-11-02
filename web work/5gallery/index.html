@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>My Image Gallery</h1>
+    <p>Click any image to start the slideshow.</p>
+
+    <div class="gallery">
+      <img
+        src="https://i.pinimg.com/736x/08/80/a3/0880a3651c435867a70f284dea6240d3.jpg"
+        alt="Mountain"
+      />
+      <img
+        src="https://i.pinimg.com/736x/52/87/74/52877413b54a32c96afb9d9653cbad5b.jpg"
+        alt="Nature"
+      />
+      <img
+        src="https://i.pinimg.com/736x/44/b2/11/44b211e4d40b1b835da33b55fdf9fd13.jpg"
+        alt="Sunrise"
+      />
+      <img
+        src="https://i.pinimg.com/736x/50/30/98/5030989c332aba06180870aaaa68aab0.jpg"
+        alt="Lake"
+      />
+      <img
+        src="https://i.pinimg.com/736x/76/03/f5/7603f58dbcb8efd568cbf659f7c406cb.jpg"
+        alt="Forest"
+      />
+      <img
+        src="https://i.pinimg.com/736x/05/68/b9/0568b9b1b86b9c29f70a9d0b3c044a16.jpg"
+        alt="Mountains"
+      />
+    </div>
+
+    <div id="slideshow" class="slideshow">
+      <button class="close" onclick="closeSlide()">&times;</button>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <img id="slideImage" src="" alt="Slideshow image" />
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+      <div class="controls">
+        <button onclick="toggleAutoPlay()" id="autoBtn">Start Auto-play</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #300404a4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #080606c5;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px #888;
+}
+
+.slideshow {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0f0202a4;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow.active {
+    display: flex;
+}
+
+#slideImage {
+    width: 700px;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.slideshow button {
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.prev, .next, .close {
+    position: absolute;
+    background: white;
+}
+
+.prev {
+    left: 20px;
+    top: 50%;
+}
+
+.next {
+    right: 20px;
+    top: 50%;
+}
+
+.close {
+    top: 15px;
+    right: 20px;
+}
+
+.controls {
+    position: absolute;
+    bottom: 25px;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 150px;
+    }
+}

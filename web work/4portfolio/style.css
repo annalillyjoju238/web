@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #ffd166;
+}
+
+.home {
+  min-height: 80vh;
+  padding: 60px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.home-content {
+  max-width: 550px;
+}
+
+.home-content h1 {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.tagline {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.home-content p {
+  line-height: 1.6;
+}
+
+.photo-placeholder {
+  width: 280px;
+  height: 280px;
+  border: 3px dashed #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.projects {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.projects h1 {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-card {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.project-card h2 {
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  line-height: 1.6;
+}
+.contact {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 50px;
+  text-align: center;
+}
+
+main {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .home {
+    padding: 40px 20px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .photo-placeholder {
+    width: 220px;
+    height: 220px;
+  }
+
+  .projects {
+    padding: 40px 20px;
+  }
+
+  .projects h1 {
+    font-size: 30px;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .contact h1 {
+    font-size: 30px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
