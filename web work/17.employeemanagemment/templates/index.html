@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+</head>
+<body>
+
+<h2>Employee Management System</h2>
+
+<h3>Add Employee</h3>
+
+<form action="/add" method="POST">
+    <input type="text" name="name"
+           placeholder="Employee Name" required>
+
+    <input type="text" name="department"
+           placeholder="Department" required>
+
+    <input type="number" name="salary"
+           placeholder="Salary" step="0.01" min="0" required>
+
+    <button type="submit">Add Employee</button>
+</form>
+
+<hr>
+
+<h3>Search Employee</h3>
+
+<form action="/" method="GET">
+    <input type="text" name="search"
+           placeholder="Search by Name or ID">
+
+    <button type="submit">Search</button>
+    <a href="/">Show All</a>
+</form>
+
+<h3>Employee Records</h3>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for emp in employees %}
+    <tr>
+        <td>{{ emp[0] }}</td>
+        <td>{{ emp[1] }}</td>
+        <td>{{ emp[2] }}</td>
+        <td>{{ emp[3] }}</td>
+
+        <td>
+            <a href="/edit/{{ emp[0] }}">Edit</a>
+
+            <form action="/delete/{{ emp[0] }}"
+                  method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

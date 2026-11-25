@@ -1,0 +1,28 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: lightblue;
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background: navy;
+    color: white;
+    border: none;
+}
+
+li {
+    background: white;
+    margin: 10px auto;
+    padding: 10px;
+    width: 300px;
+    list-style: none;
+}
+
+.done {
+    text-decoration: line-through;
+}

@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+    background: lightblue;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    background: navy;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 95%;
+}
+
+p {
+    color: red;
+    font-size: 13px;
+}
+
+@media(max-width: 600px) {
+    .container {
+        width: 85%;
+    }
+}
